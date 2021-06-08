@@ -1,7 +1,7 @@
 
 .test_template: &test_template
   script:
-    - mvn clean -Dtest=$TEST/*Test test
+    - mvn clean -Dtest=*Test test
 stages:
   - usuario
   - login
