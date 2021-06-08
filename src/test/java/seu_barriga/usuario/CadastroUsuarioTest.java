@@ -35,4 +35,12 @@ public class CadastroUsuarioTest{
         Assert.assertTrue(paginaDeCadastroDeUsuarios.isMensagemSucesso());
     }
 
+    @Test
+    public void cadastrarUsuarioNulo(){
+
+        paginaDeCadastroDeUsuarios.cadastrarUsuario("", "","");
+
+        Assert.assertTrue(paginaDeCadastroDeUsuarios.isMensagemNulo());
+    }
+
 }

@@ -31,6 +31,13 @@ public class CadastroUsuarioPage {
         return pageSource.contains("Usuário inserido com sucesso");
     }
 
+    public boolean isMensagemNulo(){
+        String pageSource = browser.getPageSource();
+        return pageSource.contains("Nome é um campo obrigatório")
+                && pageSource.contains("Email é um campo obrigatório")
+                && pageSource.contains("Senha é um campo obrigatório");
+    }
+
     public void fechar() {
         this.browser.quit();
     }

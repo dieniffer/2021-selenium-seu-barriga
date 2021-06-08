@@ -19,6 +19,9 @@ public class LoginTest {
 
     @Test
     public void efetuarLoginComSucesso(){
+        paginaDeLogin.efetuarLogin("testeautom@gmail.com","testeautom");
+        Assert.assertTrue(paginaDeLogin.isPaginaAtual());
+        Assert.assertTrue(paginaDeLogin.isMensagemDeLoginComSucesso("testeautom"));
 
 
     }
