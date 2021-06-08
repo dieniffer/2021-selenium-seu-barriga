@@ -1,0 +1,23 @@
+
+.test_template: &test_template
+  script:
+    - mvn clean -Dtest=$TEST/*Test test
+stages:
+  - usuario
+  - login
+  - conta
+"usuario":
+  stage: usuario
+  <<: *test_template
+  variables:
+    TEST: "usuario"
+login:
+  stage: login
+  <<: *test_template
+  variables:
+    TEST: "login"
+conta:
+  stage: conta
+  <<: *test_template
+  variables:
+    TEST: "conta"
