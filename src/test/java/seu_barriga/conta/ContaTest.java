@@ -29,9 +29,19 @@ public class ContaTest {
     @Test
     public void cadastrarContaComSucesso(){
         String aleatorio = String.valueOf(gerador.nextInt());
+        String nome = "Conta " + aleatorio +" testeautom";
         this.paginaCadastroDeContas = paginaContas.carregarFormulario();
-        this.paginaContas = paginaCadastroDeContas.cadastrarConta("Conta " + aleatorio +" testeautom");
+        this.paginaContas = paginaCadastroDeContas.cadastrarConta(nome);
         Assert.assertTrue(paginaCadastroDeContas.isPaginaSalvarConta());
         Assert.assertTrue(paginaCadastroDeContas.isMensagemDeCadastroComSucesso());
+        Assert.assertTrue(paginaContas.isContaCadastrada(nome));
+    }
+
+    @Test
+    public void cadastrarContaNula(){
+        this.paginaCadastroDeContas = paginaContas.carregarFormulario();
+        this.paginaContas = paginaCadastroDeContas.cadastrarConta("");
+        Assert.assertTrue(paginaCadastroDeContas.isPaginaSalvarConta());
+        Assert.assertTrue(paginaCadastroDeContas.isMensagemDeCadastroNulo());
     }
 }

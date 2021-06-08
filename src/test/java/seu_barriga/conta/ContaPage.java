@@ -8,7 +8,6 @@ import seu_barriga.BaseObject;
 public class ContaPage extends BaseObject {
     public static final String URL_ADD_CONTA = "https://seubarriga.wcaquino.me/addConta";
     private static final String URL_LISTAR_CONTAS = "https://seubarriga.wcaquino.me/contas";
-    private static final String URL_SALVAR_CONTA = "https://seubarriga.wcaquino.me/salvarConta";
 
     public ContaPage(WebDriver browser) {
         super(browser);
@@ -19,13 +18,11 @@ public class ContaPage extends BaseObject {
         return new CadastroContaPage(browser);
     }
 
-    public boolean isLeilaoCadastrado(String nome, String valorInicial, String dataAbertura) {
-        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabela-leiloes tbody tr:last-child"));
+    public boolean isContaCadastrada(String nome) {
+        WebElement linhaDaTabela = this.browser.findElement(By.cssSelector("#tabelaContas tbody tr:last-child"));
         WebElement colunaNome = linhaDaTabela.findElement(By.cssSelector("td:nth-child(1)"));
-        WebElement colunaDataAbertura = linhaDaTabela.findElement(By.cssSelector("td:nth-child(2)"));
-        WebElement colunaValorInicial = linhaDaTabela.findElement(By.cssSelector("td:nth-child(3)"));
 
-        return colunaNome.getText().equals(nome) && colunaDataAbertura.getText().equals(dataAbertura) && colunaValorInicial.getText().equals(valorInicial);
+        return colunaNome.getText().equals(nome);
     }
 
     public boolean isPaginaListaContas() {

@@ -35,4 +35,8 @@ public class CadastroContaPage extends BaseObject {
     public boolean isPaginaSalvarConta(){
         return browser.getCurrentUrl().contains(URL_SALVAR_CONTA);
     }
+
+    public boolean isMensagemDeCadastroNulo(){
+        return browser.getPageSource().contains("Informe o nome da conta");
+    }
 }
