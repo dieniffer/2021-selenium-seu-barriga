@@ -1,17 +1,15 @@
 package seu_barriga.login;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import seu_barriga.BaseObject;
+import seu_barriga.conta.ContaPage;
 
-public class LoginPage{
+public class LoginPage extends BaseObject {
     public static final String URL_LOGIN = "https://seubarriga.wcaquino.me/login";
     private static final String URL_LOGAR = "https://seubarriga.wcaquino.me/logar";
-    private WebDriver browser;
 
     public LoginPage() {
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-        this.browser = new ChromeDriver();
+        super(null);
         this.browser.navigate().to(URL_LOGIN);
     }
 
@@ -20,14 +18,15 @@ public class LoginPage{
     }
 
     public void carregarFormulario() {
-        browser.navigate().to(URL_LOGIN);
+        this.browser.navigate().to(URL_LOGIN);
     }
 
-    public void efetuarLogin(String email, String senha) {
+    public ContaPage efetuarLogin(String email, String senha) {
         browser.findElement(By.id("email")).sendKeys(email);
         browser.findElement(By.id("senha")).sendKeys(senha);
         browser.findElement(By.className("btn-primary")).submit();
 
+        return new ContaPage(browser);
     }
 
     public boolean isPaginaLogar() {
