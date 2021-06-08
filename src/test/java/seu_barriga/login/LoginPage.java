@@ -1,12 +1,12 @@
 package seu_barriga.login;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.By;
 
 public class LoginPage{
     public static final String URL_LOGIN = "https://seubarriga.wcaquino.me/login";
-    private static final String URL_LOGAR = "http://localhost:8080/logar";
+    private static final String URL_LOGAR = "https://seubarriga.wcaquino.me/logar";
     private WebDriver browser;
 
     public LoginPage() {
@@ -36,5 +36,9 @@ public class LoginPage{
 
     public boolean isMensagemDeLoginComSucesso(String usuario) {
         return browser.getPageSource().contains("Bem vindo, " + usuario + "!");
+    }
+
+    public boolean isMensagemDeLoginInvalido() {
+        return browser.getPageSource().contains("Problemas com o login do usuário");
     }
 }
