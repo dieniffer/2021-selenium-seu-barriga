@@ -13,7 +13,7 @@ usuario:
   stage: usuario
   <<: *test_template
   variables:
-    TEST: "usuario"
+    TEST: "CadastroUsuario"
 
 login:
   stage: login
