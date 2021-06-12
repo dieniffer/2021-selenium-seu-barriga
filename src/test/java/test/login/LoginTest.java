@@ -1,4 +1,4 @@
-package testcases.login;
+package test.login;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;

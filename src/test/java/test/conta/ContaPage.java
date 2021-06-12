@@ -1,9 +1,9 @@
-package testcases.conta;
+package test.conta;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import testcases.BaseObject;
+import test.BaseObject;
 
 public class ContaPage extends BaseObject {
     public static final String URL_ADD_CONTA = "https://seubarriga.wcaquino.me/addConta";
