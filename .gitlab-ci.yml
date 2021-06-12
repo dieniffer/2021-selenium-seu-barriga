@@ -1,6 +1,3 @@
-.test_template: &test_template
-  script:
-    - mvn clean -Dtest=$TEST/*Test test
 stages:
   - usuario
   - login
@@ -11,24 +8,20 @@ default:
     - selenium/standalone-chrome
 usuario:
   stage: usuario
-  <<: *test_template
-  variables:
-    TEST: "CadastroUsuario"
+  script:
+    - mvn clean test -Dtest=CadastroUsuarioTest
 
 login:
   stage: login
-  <<: *test_template
-  variables:
-    TEST: "Login"
+  script:
+    - mvn clean test -Dtest=LoginTest
 
 conta:
   stage: conta
-  <<: *test_template
-  variables:
-    TEST: "Conta"
+  script:
+    - mvn clean test -Dtest=ContaTest
 
 movimentacao:
   stage: movimentacao
-  <<: *test_template
-  variables:
-    TEST: "Movimentacao"
+  script:
+    - mvn clean test -Dtest=MovimentacaoTest
