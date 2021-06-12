@@ -24,4 +24,4 @@ conta:
 movimentacao:
   stage: movimentacao
   script:
-    - mvn clean test MovimentacaoTest
+    - mvn clean test -Dtest=MovimentacaoTest
