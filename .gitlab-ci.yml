@@ -5,6 +5,7 @@ stages:
   - usuario
   - login
   - conta
+  - movimentacao
 default:
   image: maven:3.6.3-jdk-8-slim
   services:
@@ -19,10 +20,16 @@ login:
   stage: login
   <<: *test_template
   variables:
-    TEST: "login"
+    TEST: "Login"
 
 conta:
   stage: conta
   <<: *test_template
   variables:
-    TEST: "conta"
+    TEST: "Conta"
+
+movimentacao:
+  stage: movimentacao
+  <<: *test_template
+  variables:
+    TEST: "Movimentacao"

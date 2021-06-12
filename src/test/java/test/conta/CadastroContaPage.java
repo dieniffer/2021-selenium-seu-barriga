@@ -6,7 +6,6 @@ import test.BaseObject;
 
 public class CadastroContaPage extends BaseObject {
     public static final String URL_ADD_CONTA = "https://seubarriga.wcaquino.me/addConta";
-    private static final String URL_LISTAR_CONTAS = "https://seubarriga.wcaquino.me/contas";
     private static final String URL_SALVAR_CONTA = "https://seubarriga.wcaquino.me/salvarConta";
 
     public CadastroContaPage(WebDriver browser) {

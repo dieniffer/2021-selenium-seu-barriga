@@ -3,6 +3,7 @@ package test.login;
 import org.openqa.selenium.By;
 import test.BaseObject;
 import test.conta.ContaPage;
+import test.movimentacao.MovimentacaoPage;
 
 public class LoginPage extends BaseObject {
     public static final String URL_LOGIN = "https://seubarriga.wcaquino.me/login";
@@ -27,6 +28,14 @@ public class LoginPage extends BaseObject {
         browser.findElement(By.className("btn-primary")).submit();
 
         return new ContaPage(browser);
+    }
+
+    public MovimentacaoPage efetuarLoginMov(String email, String senha) {
+        browser.findElement(By.id("email")).sendKeys(email);
+        browser.findElement(By.id("senha")).sendKeys(senha);
+        browser.findElement(By.className("btn-primary")).submit();
+
+        return new MovimentacaoPage(browser);
     }
 
     public boolean isPaginaLogar() {
