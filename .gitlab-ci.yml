@@ -9,14 +9,14 @@ default:
 usuario:
   stage: usuario
   script:
-    - mvn test -Dtest=CadastroUsuarioTest
+    - mvn clean test -Dtest=*CadastroUsuarioTest
 
 login:
   stage: login
   script:
-    - mvn test -Dtest=LoginTest
+    - mvn clean test -Dtest=*LoginTest
 
 conta:
   stage: conta
   script:
-    - mvn test -Dtest=ContaTest
+    - mvn clean test -Dtest=*ContaTest
