@@ -1,10 +1,10 @@
-package seu_barriga.conta;
+package testcases.conta;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import seu_barriga.login.LoginPage;
+import testcases.login.LoginPage;
 
 import java.util.Random;
 

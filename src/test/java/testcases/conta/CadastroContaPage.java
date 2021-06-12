@@ -1,8 +1,8 @@
-package seu_barriga.conta;
+package testcases.conta;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import seu_barriga.BaseObject;
+import testcases.BaseObject;
 
 public class CadastroContaPage extends BaseObject {
     public static final String URL_ADD_CONTA = "https://seubarriga.wcaquino.me/addConta";

@@ -1,11 +1,10 @@
-package seu_barriga.usuario;
+package testcases.usuario;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
+
 import java.util.Random;
 
 public class CadastroUsuarioTest{

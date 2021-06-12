@@ -1,4 +1,4 @@
-package seu_barriga.login;
+package testcases.login;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;

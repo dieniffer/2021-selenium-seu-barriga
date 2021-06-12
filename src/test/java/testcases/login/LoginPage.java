@@ -1,8 +1,8 @@
-package seu_barriga.login;
+package testcases.login;
 
 import org.openqa.selenium.By;
-import seu_barriga.BaseObject;
-import seu_barriga.conta.ContaPage;
+import testcases.BaseObject;
+import testcases.conta.ContaPage;
 
 public class LoginPage extends BaseObject {
     public static final String URL_LOGIN = "https://seubarriga.wcaquino.me/login";
