@@ -1,0 +1,21 @@
+jobs:
+  usuario:
+    steps:
+      - run: mvn clean test -Dtest=usuario/*Test
+  
+  login:
+    steps:
+      - run: mvn clean test login/*Test
+      
+    conta:
+      steps:
+      - run: mvn clean test -Dtest=conta/*Test
+  
+  movimentacao:
+    steps:
+      - run: mvn clean test movimentacao/*Test
+  
+  services:
+      selenium:
+        image: selenium/standalone-chrome
+      
