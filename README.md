@@ -1,7 +1,6 @@
-[![pipeline status](https://git.sicredi.net/siebel-qa/siebel-web/badges/master/pipeline.svg)](https://git.sicredi.net/siebel-qa/siebel-web/commits/master)
 
 ## Backlog
-* [Itens Passiveis de Melhorias](src/test/resources/backlog_do_projeto/TODOLIST.md)
+* [Itens Passiveis de Melhorias]: corrigir a pipeline, melorar o Page Objects
 
 
 ## Descrição
@@ -66,4 +65,4 @@ Exemplos:
  ```` 
 
 # Dúvidas
-Procurar Time de Qualidade para suporte (@adelar_vieira, @dimitrius_santana, @guilherme_mattos  )
+Procurar (dienitavares@gmail.com )
