@@ -21,7 +21,7 @@ Exemplo:
 Diretório C: para baixar os arquivos do projeto
 ````
 - Acessar o git Bash, ir até a pasta criada.
-- Realizar o clone do projeto https://gitlab.com/dienitavares/2021-selenium-seu-barriga.git usando o comando Git Clone e a URL
+- Realizar o clone do projeto https://github.com/dieniffer/2021-selenium-seu-barriga.git usando o comando Git Clone e a URL
 - Garantir que as dependências tenham sido baixadas.
 
 
@@ -29,12 +29,6 @@ Diretório C: para baixar os arquivos do projeto
 
 ### Localmente
 - Abrir o Intellij, ir em **File -> Open projeto.**
-
-### Remoto (CI)
-- Acessar o repositorio https://gitlab.com/dienitavares/2021-selenium-seu-barriga/-/pipelines
-- Clicar na botão **Run Pipeline**.
-- No campo **Create for**, escolher a opção **Master**.
-- Clicar no botão **Create Pipeline**.
 
 ## Padrões
 - Para cada página terá um PageObjects com seus respectivos métodos criados.
@@ -47,11 +41,7 @@ Diretório C: para baixar os arquivos do projeto
 
 - Exemplo: **HomePage.java**
 
-- Para executar todos os testes basta ir até o caminho: **SRC->Test->Resources->Suites**-> botão direito no arquivo SuiteSiebelWeb.xml na opção "Run"
-- [Suite] é um arquivo que agrupa todos os cenários de testes. (https://testng.org/doc/documentation-main.html#testng-xml)
 ## Padrões
-
-
 Exemplos:
 ````
 public class DadosBasicosPage{}
